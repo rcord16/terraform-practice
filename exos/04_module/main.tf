@@ -9,9 +9,16 @@ terraform {
 
 provider "docker" {}
 
-module "nginx" {
+module "nginx1" {
   source        = "./modules/nginx"
   name          = "nginx_1"
   image         = "nginx:latest"
   external_port = 8080
+}
+
+module "nginx2" {
+  source        = "./modules/nginx"
+  name          = "nginx_2"
+  image         = "nginx:latest"
+  external_port = 8081
 }
