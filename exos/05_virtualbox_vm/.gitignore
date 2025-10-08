@@ -1,8 +1,4 @@
-# Ignorer les fichiers lourds
-*.ova
 *.box
-*.vmdk
-*.iso
-
-# Dossier images local
-images/
+*.ova
+.terraform/
+terraform.tfstate*
