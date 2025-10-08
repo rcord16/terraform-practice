@@ -11,7 +11,7 @@ provider "virtualbox" {}
 
 resource "virtualbox_vm" "ubuntu_vm" {
   name   = "ubuntu_vm"
-  # image  = "C:\\images\\jammy-server-cloudimg-amd64.ova"
+  image  = ""
   cpus   = 1
   memory = "1024 mib"
 
