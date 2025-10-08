@@ -10,10 +10,10 @@ terraform {
 provider "virtualbox" {}
 
 resource "virtualbox_vm" "ubuntu_vm" {
-  name   = "ubuntu_vm"
-  image  = "${path.module}/images/bento-ubuntu-22.04-amd64.box"
-  cpus   = 1
-  memory = "1024 mib"
+  name   = var.vm_name
+  image  = "${path.module}/${var.vm_image_rel}"
+  cpus   = var.vm_cpus
+  memory = var.vm_memory
 
   network_adapter { type = "nat" }
 }
